@@ -4,4 +4,4 @@ const { CourseDetails } = require("../controller/courseController");
 const router = express.Router();
 
 router.get("/all/details", CourseDetails);
-module.exports = router;
+export router

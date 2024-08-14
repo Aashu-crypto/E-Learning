@@ -1,8 +1,6 @@
-import prisma from "@repo/db/client";
-
 import express from "express";
 
-const rootRouter = require("./routes");
+import rootRouter from './routes/index'
 
 const app = express();
 app.use("api/vi", rootRouter);
