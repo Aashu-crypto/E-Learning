@@ -8,6 +8,7 @@ const UserSession = (props: Props) => {
   console.log(session);
 
   return <div>userSession:{JSON.stringify(session)}</div>;
+  
 };
 
 export default UserSession;
