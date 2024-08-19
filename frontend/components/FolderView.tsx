@@ -1,7 +1,8 @@
-import CourseCard from "@/components/CourseCard";
-import Image from "next/image";
-import NavBar from "@/components/NavBar";
-export default function Home() {
+import React from "react";
+
+type Props = {};
+
+const FolderView = (props: Props) => {
   const courseDetails = [
     {
       course_id: 1,
@@ -45,12 +46,18 @@ export default function Home() {
     },
   ];
   return (
-    <main className="flex h-screen flex-col  ">
-      <div className=" flex w-full  flex-wrap  mt-2 justify-center ">
-        {courseDetails.map((item) => {
-          return <CourseCard />;
-        })}
-      </div>
-    </main>
+    <div className="flex flex-col items-center  md:flex-row md:flex-wrap justify-center ">
+      {courseDetails.map((item) => {
+        return (
+          <div className="border w-full m-2 md:w-1/4 rounded-sm flex justify-center items-center bg-blue-200">
+            <div className="w-11/12 h-48 my-4 bg-purple-300 border-2 flex justify-center items-center border-b-4 border-r-4 border-black">
+              Week {item.course_id}
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
-}
+};
+
+export default FolderView;
